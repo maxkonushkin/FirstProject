@@ -6,6 +6,7 @@ public class TestBase {
 
     @Story("Открываем сайт банка")
     @BeforeAll
+
     static void beforeAll() {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://rencredit.ru";
