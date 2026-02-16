@@ -12,37 +12,37 @@ public class MainPage {
         open("/payment");
         return this;
     }
-    @Step("Нажимаем на кнопку Перевод по номеру телефона")
+    @Step("Нажимаем на кнопку Переводы по номеру телефона")
     public MainPage transfersByPhoneNumber(){
         $("[href='/sbp/']").click();
         return this;
     }
-    @Step("Нажимаем на кнопку 2")
+    @Step("Нажимаем на кнопку Оплата кредита")
     public MainPage loanRepayment(){
         $("[href='/payment/credit/']").click();
         return this;
     }
-    @Step("Нажимаем на кнопку 3")
+    @Step("Нажимаем на кнопку Оплата мобильными устройствами")
     public MainPage paymentByMobile(){
         $("[href='/services/mobile/']").click();
         return this;
     }
-    @Step("Нажимаем на кнопку 4")
+    @Step("Нажимаем на кнопку Переводы в иностранной валюте")
     public MainPage currencyTransfer(){
         $("[href='/single/swift/']").click();
         return this;
     }
-    @Step("Нажимаем на кнопку 5")
+    @Step("Нажимаем на кнопку Пополнение карт")
     public MainPage cardReplenishment(){
         $("[href='/payment/cards/']").click();
         return this;
     }
-    @Step("Нажимаем на кнопку 6")
+    @Step("Нажимаем на кнопку Пополнение вклада")
     public MainPage depositReplenishment(){
         $(".tile__info").click();
         return this;
     }
-    @Step("Нажимаем на кнопку 7")
+    @Step("Нажимаем на кнопку Перевод по реквизитам")
     public MainPage transferByRequisite(){
         $(".tile__info").click();
         return this;

@@ -1,11 +1,15 @@
+import io.qameta.allure.Story;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
 
+@Story("Проверяем работу кнопок на ЭФ Переводы")
 public class WebTests extends TestBase {
 
     MainPage mainPage = new MainPage();
 
     @Test
+    @DisplayName("Проверка работы кнопки Переводы по номеру телефона")
     public void transfersByPhoneNumber() {
         mainPage.openPaymentPage();
         mainPage.transfersByPhoneNumber();
@@ -14,6 +18,7 @@ public class WebTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Проверка работы кнопки Оплата кредита")
     public void loanRepayment() {
         mainPage.openPaymentPage();
         mainPage.loanRepayment();
@@ -21,6 +26,7 @@ public class WebTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Проверка работы кнопки Оплата мобильными устройствами")
     public void paymentByMobile() {
         mainPage.openPaymentPage();
         mainPage.paymentByMobile();
@@ -28,6 +34,7 @@ public class WebTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Проверка работы кнопки Переводы в иностранной валюте")
     public void currencyTransfer() {
         mainPage.openPaymentPage();
         mainPage.currencyTransfer();
@@ -35,6 +42,7 @@ public class WebTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Проверка работы кнопки Пополнение карт")
     public void cardReplenishment() {
         mainPage.openPaymentPage();
         mainPage.cardReplenishment();
@@ -42,6 +50,7 @@ public class WebTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Проверка работы кнопки Пополнение вклада")
     public void depositReplenishment() {
         mainPage.openPaymentPage();
         mainPage.depositReplenishment();
@@ -49,6 +58,7 @@ public class WebTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Проверка работы кнопки Перевод по реквизитам")
     public void transferByRequisite() {
         mainPage.openPaymentPage();
         mainPage.transferByRequisite();
