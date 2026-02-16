@@ -14,7 +14,6 @@ public class WebTests extends TestBase {
         mainPage.openPaymentPage();
         mainPage.transfersByPhoneNumber();
         mainPage.checkResult("Система быстрых платежей");
-
     }
 
     @Test

@@ -1,19 +1,23 @@
 package pages;
 import io.qameta.allure.Step;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.files.DownloadActions.click;
 
 public class MainPage {
 
     @Step("Открываем страницу платежей")
     public MainPage openPaymentPage(){
         open("/payment");
-        $("#button-new button-new--white button-new--mobile-medium").click();
         return this;
     }
+
+    @Step("Закрываем баннер")
+    public MainPage closeBanner(){
+        $(".attention__close").click();
+        return this;
+    }
+
     @Step("Нажимаем на кнопку Переводы по номеру телефона")
     public MainPage transfersByPhoneNumber(){
         $("[href='/sbp/']").click();
