@@ -25,7 +25,10 @@ public class TestBase {
     static void beforeAll() {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://rencredit.ru";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        String remoteUrl = System.getProperty("remoteUrl");
+        Configuration.remote = remoteUrl;
+        String baseUrl = System.getProperty("baseUrl", "https://demoqa.com");
+        Configuration.baseUrl = baseUrl;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
