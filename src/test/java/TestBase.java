@@ -24,10 +24,9 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "https://rencredit.ru";
         String remoteUrl = System.getProperty("remoteUrl");
         Configuration.remote = remoteUrl;
-        String baseUrl = System.getProperty("baseUrl", "https://demoqa.com");
+        String baseUrl = System.getProperty("baseUrl", "https://rencredit.ru/");
         Configuration.baseUrl = baseUrl;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();

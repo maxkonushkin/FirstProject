@@ -42,12 +42,12 @@ public class MainPage {
     }
     @Step("Нажимаем на кнопку Пополнение вклада")
     public MainPage depositReplenishment(){
-        $(".tile__info").click();
+        $("[href='/payment/deposits/']").click();
         return this;
     }
     @Step("Нажимаем на кнопку Перевод по реквизитам")
     public MainPage transferByRequisite(){
-        $(".tile__info").click();
+        $("[href='/single/transfers/']").click();
         return this;
     }
     @Step("Проверяем результат")
