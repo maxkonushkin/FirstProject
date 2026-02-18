@@ -3,7 +3,7 @@
 ## :pushpin: Содержание:
 
 - [Использованный стек технологий](#computer-использованный-стек-технологий)
-- [Сборка в Jenkins](#сборка-в-jenkins)
+- <a href="#jenkins">Сборка в Jenkins</a>
 - [Пример Allure-отчета](#пример-allure-отчета)
 - [Уведомления в Telegram с использованием бота](#уведомления-в-telegram-с-использованием-бота)
 
@@ -30,7 +30,7 @@
 - При прогоне тестов браузер запускается в [Selenoid](https://aerokube.com/selenoid/).
 - Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием Allure-отчета и отправкой результатов в <code>Telegram</code> при помощи бота.
 
-
+<a id="jenkins"></a>
 ## <img src="media/logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в Jenkins
 <p align="center">
 <img title="Jenkins Build" src="media/screens/Jenkins.PNG">
