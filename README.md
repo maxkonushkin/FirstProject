@@ -4,7 +4,7 @@
 
 - [Использованный стек технологий](#computer-использованный-стек-технологий)
 - <a href="#jenkins">Сборка в Jenkins</a>
-- [Пример Allure-отчета](#пример-allure-отчета)
+- <a href="#allure">Пример Allure-отчета</a>
 - [Уведомления в Telegram с использованием бота](#уведомления-в-telegram-с-использованием-бота)
 
 ## :computer: Использованный стек технологий
@@ -36,6 +36,7 @@
 <img title="Jenkins Build" src="media/screens/Jenkins.PNG">
 </p>
 
+<a id="allure"></a>
 ## <img src="media/logo/Allure_Report.svg" title="Allure Report" width="4%"/> Пример Allure-отчета
 ### Overview
 
