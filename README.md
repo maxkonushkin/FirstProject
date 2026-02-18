@@ -2,11 +2,12 @@
 
 ## :pushpin: Содержание:
 
-- [Использованный стек технологий](#computer-использованный-стек-технологий)
+- <a href="#tools">Технологии и инструменты</a>
 - <a href="#jenkins">Сборка в Jenkins</a>
 - <a href="#allure">Пример Allure-отчета</a>
 - <a href="#telegram">Уведомление в Telegram при помощи бота</a>
 
+<a id="tools"></a>
 ## :computer: Использованный стек технологий
 
 <p align="center">
