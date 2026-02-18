@@ -5,7 +5,7 @@
 - [Использованный стек технологий](#computer-использованный-стек-технологий)
 - <a href="#jenkins">Сборка в Jenkins</a>
 - <a href="#allure">Пример Allure-отчета</a>
-- [Уведомления в Telegram с использованием бота](#уведомления-в-telegram-с-использованием-бота)
+- <a href="#telegram">Уведомление в Telegram при помощи бота</a>
 
 ## :computer: Использованный стек технологий
 
@@ -68,6 +68,7 @@
 <img title="Jira Task" src="media/screens/Jira.PNG">
 </p>
 
+<a id="telegram"></a>
 ## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
 
 После завершения сборки, бот созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
