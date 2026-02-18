@@ -33,7 +33,7 @@
 
 ## <img src="media/logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в Jenkins
 <p align="center">
-<img title="Jenkins Build" src="media/screens/Jenkins.png">
+<img title="Jenkins Build" src="media/screens/Jenkins.PNG">
 </p>
 
 ## <img src="media/logo/Allure_Report.svg" title="Allure Report" width="4%"/> Пример Allure-отчета
@@ -46,7 +46,7 @@
 ### Результат выполнения теста
 
 <p align="center">
-<img title="Test Results in Alure" src="media/screens/Result.png">
+<img title="Test Results in Alure" src="media/screens/Result.PNG">
 </p>
 
 ## <img src="media/logo/AllureTestOps.svg" title="Allure TestOps" width="4%"/> Интеграция с Allure TestOps
@@ -64,7 +64,7 @@
 Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>, в тикете отображается информация, какие тест-кейсы были написаны в рамках задачи и результат их прогона.
 
 <p align="center">
-<img title="Jira Task" src="media/screens/Jira.png">
+<img title="Jira Task" src="media/screens/Jira.PNG">
 </p>
 
 ## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
@@ -72,7 +72,7 @@
 После завершения сборки, бот созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
 
 <p align="center">
-<img width="70%" title="Telegram Notifications" src="media/screens/Telegram.png">
+<img width="70%" title="Telegram Notifications" src="media/screens/Telegram.PNG">
 </p>
 
 
