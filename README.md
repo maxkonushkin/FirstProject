@@ -24,3 +24,16 @@
 <img width="6%" title="Telegram" src="media/logo/Telegram.svg">
 <img width="5%" title="Jira" src="media/logo/Jira.svg">
 </p>
+
+- В данном проекте автотесты написаны на языке <code>Java</code> с использованием фреймворка для тестирования Selenide.
+- В качестве сборщика был использован - <code>Gradle</code>.
+- Использованы фреймворки <code>JUnit 5</code> и [Selenide](https://selenide.org/).
+- При прогоне тестов браузер запускается в [Selenoid](https://aerokube.com/selenoid/).
+- Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием Allure-отчета и отправкой результатов в <code>Telegram</code> при помощи бота.
+
+
+## <img src="media/logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в Jenkins
+<p align="center">
+<img title="Jenkins Build" src="media/Jenkins.png">
+</p>
+
