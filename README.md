@@ -1,4 +1,4 @@
-# Проект по автоматизации тестирования для "Ренессанс банк".
+# Проект по автоматизации тестирования для ["Ренессанс Банк"](https://rencredit.ru).
 
 ## :pushpin: Содержание:
 
@@ -32,13 +32,13 @@
 - Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием Allure-отчета и отправкой результатов в <code>Telegram</code> при помощи бота.
 
 <a id="jenkins"></a>
-## <img src="media/logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в Jenkins
+## <img src="media/logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в [Jenkins](https://www.jenkins.io).
 <p align="center">
 <img title="Jenkins Build" src="media/screens/Jenkins.PNG">
 </p>
 
 <a id="allure"></a>
-## <img src="media/logo/Allure_Report.svg" title="Allure Report" width="4%"/> Пример Allure-отчета
+## <img src="media/logo/Allure_Report.svg" title="Allure Report" width="4%"/> Пример [Allure-отчета](https://allurereport.org)
 ### Overview
 
 <p align="center">
@@ -51,7 +51,7 @@
 <img title="Test Results in Alure" src="media/screens/Result.PNG">
 </p>
 
-## <img src="media/logo/AllureTestOps.svg" title="Allure TestOps" width="4%"/> Интеграция с Allure TestOps
+## <img src="media/logo/AllureTestOps.svg" title="Allure TestOps" width="4%"/> Интеграция с [Allure TestOps](https://allure.autotests.cloud)
 
 Выполнена интеграция сборки <code>Jenkins</code> с <code>Allure TestOps</code>.
 Результат выполнения автотестов отображается в <code>Allure TestOps</code>
@@ -61,7 +61,7 @@
 <img title="Allure TestOps DashBoard" src="media/screens/TestOps.PNG">
 </p>
 
-## <img src="media/logo/Jira.svg" title="Jira" width="4%"/> Интеграция с Jira
+## <img src="media/logo/Jira.svg" title="Jira" width="4%"/> Интеграция с [Jira](https://jira.autotests.cloud)
 
 Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>, в тикете отображается информация, какие тест-кейсы были написаны в рамках задачи и результат их прогона.
 
