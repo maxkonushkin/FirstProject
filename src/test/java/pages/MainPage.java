@@ -1,4 +1,5 @@
 package pages;
+import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -6,53 +7,65 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
 
+    private final SelenideElement
+            transfersByPhoneNumber = $$("[href='/sbp/']").findBy(text("Переводы по номеру телефона")),
+            loanRepayment = $$("[href='/payment/credit/']").findBy(text("Оплата кредита")),
+            paymentByMobile = $$("[href='/services/mobile/']").findBy(text("Оплата мобильными устройствами")),
+            currencyTransfer = $$("[href='/single/swift/']").findBy(text("Переводы в иностранной валюте")),
+            cardReplenishment =$$("[href='/payment/cards/']").findBy(text("Пополнение карт")),
+            depositReplenishment = $$("[href='/payment/deposits/']").findBy(text("Пополнение вклада")),
+            transferByRequisite = $$("[href='/single/transfers/']").findBy(text("Перевод по реквизитам")),
+            checkResult = $(".sme-banner__title"),
+            attention = $(".attention__heading"),
+            attentionСlose = $(".attention__close");
+
     @Step("Открываем страницу платежей")
     public MainPage openPaymentPage(){
         open("/payment");
-        if ($(".attention__heading").is(visible)){
-            $(".attention__close").click();}
+        if (attention.is(visible)){
+            attentionСlose.click();}
         return this;
-
     }
 
     @Step("Нажимаем на кнопку Переводы по номеру телефона")
     public MainPage transfersByPhoneNumber(){
-        $$("[href='/sbp/']").findBy(text("Переводы по номеру телефона")).click();
+        transfersByPhoneNumber.click();
         return this;
     }
+
     @Step("Нажимаем на кнопку Оплата кредита")
     public MainPage loanRepayment(){
-        $$("[href='/payment/credit/']").findBy(text("Оплата кредита")).click();
+        loanRepayment.click();
         return this;
     }
     @Step("Нажимаем на кнопку Оплата мобильными устройствами")
     public MainPage paymentByMobile(){
-        $$("[href='/services/mobile/']").findBy(text("Оплата мобильными устройствами")).click();
+        paymentByMobile.click();
         return this;
     }
     @Step("Нажимаем на кнопку Переводы в иностранной валюте")
     public MainPage currencyTransfer(){
-        $$("[href='/single/swift/']").findBy(text("Переводы в иностранной валюте")).click();
+        currencyTransfer.click();
         return this;
     }
     @Step("Нажимаем на кнопку Пополнение карт")
     public MainPage cardReplenishment(){
-        $$("[href='/payment/cards/']").findBy(text("Пополнение карт")).click();
+        cardReplenishment.click();
         return this;
     }
     @Step("Нажимаем на кнопку Пополнение вклада")
     public MainPage depositReplenishment(){
-        $$("[href='/payment/deposits/']").findBy(text("Пополнение вклада")).click();
+        depositReplenishment.click();
         return this;
     }
     @Step("Нажимаем на кнопку Перевод по реквизитам")
     public MainPage transferByRequisite(){
-        $$("[href='/single/transfers/']").findBy(text("Перевод по реквизитам")).click();
+        transferByRequisite.click();
         return this;
     }
     @Step("Проверяем результат")
     public MainPage checkResult(String value){
-        $(".sme-banner__title").shouldHave(text(value));
+        checkResult.shouldHave(text(value));
         return this;
     }
 
