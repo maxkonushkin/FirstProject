@@ -1,4 +1,5 @@
 package pages;
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import static com.codeborne.selenide.Condition.text;
@@ -7,17 +8,17 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
 
-    private final SelenideElement
-            transfersByPhoneNumber = $$("[href='/sbp/']").findBy(text("Переводы по номеру телефона")),
-            loanRepayment = $$("[href='/payment/credit/']").findBy(text("Оплата кредита")),
-            paymentByMobile = $$("[href='/services/mobile/']").findBy(text("Оплата мобильными устройствами")),
-            currencyTransfer = $$("[href='/single/swift/']").findBy(text("Переводы в иностранной валюте")),
-            cardReplenishment =$$("[href='/payment/cards/']").findBy(text("Пополнение карт")),
-            depositReplenishment = $$("[href='/payment/deposits/']").findBy(text("Пополнение вклада")),
-            transferByRequisite = $$("[href='/single/transfers/']").findBy(text("Перевод по реквизитам")),
-            checkResult = $(".sme-banner__title"),
+    private final SelenideElement checkResult = $(".sme-banner__title"),
             attention = $(".attention__heading"),
             attentionСlose = $(".attention__close");
+
+    ElementsCollection transfersByPhoneNumber = $$("[href='/sbp/']"),
+            loanRepayment = $$("[href='/payment/credit/']"),
+            paymentByMobile = $$("[href='/services/mobile/']"),
+            currencyTransfer = $$("[href='/single/swift/']"),
+            cardReplenishment = $$("[href='/payment/cards/']"),
+            depositReplenishment = $$("[href='/payment/deposits/']"),
+            transferByRequisite = $$("[href='/single/transfers/']");
 
     @Step("Открываем страницу платежей")
     public MainPage openPaymentPage(){
@@ -28,39 +29,39 @@ public class MainPage {
     }
 
     @Step("Нажимаем на кнопку Переводы по номеру телефона")
-    public MainPage transfersByPhoneNumber(){
-        transfersByPhoneNumber.click();
+    public MainPage transfersByPhoneNumber(String value){
+        transfersByPhoneNumber.findBy(text(value)).click();
         return this;
     }
 
     @Step("Нажимаем на кнопку Оплата кредита")
-    public MainPage loanRepayment(){
-        loanRepayment.click();
+    public MainPage loanRepayment(String value){
+        loanRepayment.findBy(text(value)).click();
         return this;
     }
     @Step("Нажимаем на кнопку Оплата мобильными устройствами")
-    public MainPage paymentByMobile(){
-        paymentByMobile.click();
+    public MainPage paymentByMobile(String value){
+        paymentByMobile.findBy(text(value)).click();
         return this;
     }
     @Step("Нажимаем на кнопку Переводы в иностранной валюте")
-    public MainPage currencyTransfer(){
-        currencyTransfer.click();
+    public MainPage currencyTransfer(String value){
+        currencyTransfer.findBy(text(value)).click();
         return this;
     }
     @Step("Нажимаем на кнопку Пополнение карт")
-    public MainPage cardReplenishment(){
-        cardReplenishment.click();
+    public MainPage cardReplenishment(String value){
+        cardReplenishment.findBy(text(value)).click();
         return this;
     }
     @Step("Нажимаем на кнопку Пополнение вклада")
-    public MainPage depositReplenishment(){
-        depositReplenishment.click();
+    public MainPage depositReplenishment(String value){
+        depositReplenishment.findBy(text(value)).click();
         return this;
     }
     @Step("Нажимаем на кнопку Перевод по реквизитам")
-    public MainPage transferByRequisite(){
-        transferByRequisite.click();
+    public MainPage transferByRequisite(String value){
+        transferByRequisite.findBy(text(value)).click();
         return this;
     }
     @Step("Проверяем результат")

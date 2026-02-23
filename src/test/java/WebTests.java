@@ -12,7 +12,7 @@ public class WebTests extends TestBase {
     @DisplayName("Проверка работы кнопки Переводы по номеру телефона")
     public void transfersByPhoneNumber() {
         mainPage.openPaymentPage();
-        mainPage.transfersByPhoneNumber();
+        mainPage.transfersByPhoneNumber("Переводы по номеру телефона");
         mainPage.checkResult("Система быстрых платежей");
     }
 
@@ -20,7 +20,7 @@ public class WebTests extends TestBase {
     @DisplayName("Проверка работы кнопки Оплата кредита")
     public void loanRepayment() {
         mainPage.openPaymentPage();
-        mainPage.loanRepayment();
+        mainPage.loanRepayment("Оплата кредита");
         mainPage.checkResult("Оплата кредита");
     }
 
@@ -28,7 +28,7 @@ public class WebTests extends TestBase {
     @DisplayName("Проверка работы кнопки Оплата мобильными устройствами")
     public void paymentByMobile() {
         mainPage.openPaymentPage();
-        mainPage.paymentByMobile();
+        mainPage.paymentByMobile("Оплата мобильными устройствами");
         mainPage.checkResult("Оплата смартфоном");
     }
 
@@ -36,7 +36,7 @@ public class WebTests extends TestBase {
     @DisplayName("Проверка работы кнопки Переводы в иностранной валюте")
     public void currencyTransfer() {
         mainPage.openPaymentPage();
-        mainPage.currencyTransfer();
+        mainPage.currencyTransfer("Переводы в иностранной валюте");
         mainPage.checkResult("Переводы в иностранной валюте");
     }
 
@@ -44,7 +44,7 @@ public class WebTests extends TestBase {
     @DisplayName("Проверка работы кнопки Пополнение карт")
     public void cardReplenishment() {
         mainPage.openPaymentPage();
-        mainPage.cardReplenishment();
+        mainPage.cardReplenishment("Пополнение карт");
         mainPage.checkResult("Пополнение карт");
     }
 
@@ -52,7 +52,7 @@ public class WebTests extends TestBase {
     @DisplayName("Проверка работы кнопки Пополнение вклада")
     public void depositReplenishment() {
         mainPage.openPaymentPage();
-        mainPage.depositReplenishment();
+        mainPage.depositReplenishment("Пополнение вклада");
         mainPage.checkResult("Пополнение вкладов");
     }
 
@@ -60,7 +60,7 @@ public class WebTests extends TestBase {
     @DisplayName("Проверка работы кнопки Перевод по реквизитам")
     public void transferByRequisite() {
         mainPage.openPaymentPage();
-        mainPage.transferByRequisite();
+        mainPage.transferByRequisite("Перевод по реквизитам");
         mainPage.checkResult("Переводы по реквизитам");
     }
 
