@@ -9,8 +9,8 @@ import static com.codeborne.selenide.Selenide.*;
 public class MainPage {
 
     private final SelenideElement checkResult = $(".sme-banner__title"),
-            attention = $(".attention__heading"),
-            attentionСlose = $(".attention__close");
+            attention = $(".attention__box"),
+            attentionСlose = $(".attention__button");
 
     ElementsCollection transfersByPhoneNumber = $$("[href='/sbp/']"),
             loanRepayment = $$("[href='/payment/credit/']"),
