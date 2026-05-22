@@ -32,7 +32,7 @@
 - Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием Allure-отчета и отправкой результатов в <code>Telegram</code> при помощи бота.
 
 <a id="jenkins"></a>
-## <img src="media/logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в [Jenkins](https://www.jenkins.io).
+## <img src="media/logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в [Jenkins](https://jenkins.autotests.cloud/view/java_students/job/C39_mkonushkin_RenProject/).
 <p align="center">
 <img title="Jenkins Build" src="media/screens/Jenkins.PNG">
 </p>
