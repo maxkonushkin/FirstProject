@@ -11,7 +11,7 @@
 ## :computer: Использованный стек технологий
 
 <p align="center">
-<<a href="https://www.jetbrains.com/idea/" target="_blank">
+<a href="https://www.jetbrains.com/idea/" target="_blank">
   <img width="6%" title="IntelliJ IDEA" src="media/logo/Intelij_IDEA.svg">
 </a>
 <a href="https://github.com" target="_blank">
