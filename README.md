@@ -59,7 +59,7 @@
 
 ``` mermaid
 flowchart LR;
-A(local launch)-->B(Allure_Report);
+A(local launch)-->B(Allure_Report)-->P(Telegram);
     C(Jenkins)-->D(GitHub)-->U(Selenoid);
     U(Selenoid)-->I(Allure_TestOps
     Allure_Report)-->O(Telegram);
