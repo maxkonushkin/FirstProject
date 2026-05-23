@@ -55,6 +55,26 @@
 - При прогоне тестов браузер запускается в [Selenoid](https://aerokube.com/selenoid/).
 - Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием Allure-отчета и отправкой результатов в <code>Telegram</code> при помощи бота.
 
+### Реализована следующая схема взаимодействия технологий и инструментов
+
+``` mermaid
+flowchart LR;
+    A(IntelliJ IDEA
+     Java
+     Selenide
+    Gradle
+    JUnit 5)-->B(GitHub);
+    B-->C(Jenkins);
+    C-->D(Telegram);
+    C<==>E(Selenoid);
+    
+    C-->G(Allure_Report);
+    
+    C<==>F(Allure_TestOps);
+    F-->J(Jira);
+
+```
+
 <a id="jenkins"></a>
 ## <img src="media/logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в [Jenkins](https://jenkins.autotests.cloud/view/java_students/job/C39_mkonushkin_RenProject/).
 <p align="center">
