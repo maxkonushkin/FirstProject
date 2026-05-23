@@ -59,7 +59,6 @@
 
 ``` mermaid
 flowchart LR;
- node3
 A(local launch)-->B(Allure_Report)-->P(Telegram);
     C(Jenkins)-->D(GitHub)-->U(Selenoid);
     U(Selenoid)-->I(Allure_TestOps
