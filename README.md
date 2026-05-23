@@ -60,7 +60,7 @@
 ``` mermaid
 flowchart LR;
 A(local launch)-->B(Allure_Report);
-    A(Jenkins)-->B(GitHub);
+    C(Jenkins)-->D(GitHub);
 ```
 
 <a id="jenkins"></a>
