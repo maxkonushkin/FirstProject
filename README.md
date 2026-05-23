@@ -61,15 +61,6 @@
 flowchart LR;
 A(local launch)-->B(Allure_Report);
     A(Jenkins)-->B(GitHub);
-    B-->C(Jenkins);
-    C-->D(Telegram);
-    C<==>E(Selenoid);
-    
-    C-->G(Allure_Report);
-    
-    C<==>F(Allure_TestOps);
-    F-->J(Jira);
-
 ```
 
 <a id="jenkins"></a>
