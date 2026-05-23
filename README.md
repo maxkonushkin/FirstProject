@@ -59,11 +59,8 @@
 
 ``` mermaid
 flowchart LR;
-    A(IntelliJ IDEA
-     Java
-     Selenide
-    Gradle
-    JUnit 5)-->B(GitHub);
+A(local launch)-->B(Allure_Report);
+    A(Jenkins)-->B(GitHub);
     B-->C(Jenkins);
     C-->D(Telegram);
     C<==>E(Selenoid);
