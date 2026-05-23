@@ -11,18 +11,42 @@
 ## :computer: Использованный стек технологий
 
 <p align="center">
-<img width="6%" title="IntelliJ IDEA" src="media/logo/Intelij_IDEA.svg">
-<img width="6%" title="Java" src="media/logo/Java.svg">
-<img width="6%" title="Selenide" src="media/logo/Selenide.svg">
-<img width="6%" title="Selenoid" src="media/logo/Selenoid.svg">
-<img width="6%" title="Allure Report" src="media/logo/Allure_Report.svg">
-<img width="5%" title="Allure TestOps" src="media/logo/AllureTestOps.svg">
-<img width="6%" title="Gradle" src="media/logo/Gradle.svg">
-<img width="6%" title="JUnit5" src="media/logo/JUnit5.svg">
-<img width="6%" title="GitHub" src="media/logo/GitHub.svg">
-<img width="6%" title="Jenkins" src="media/logo/Jenkins.svg">
-<img width="6%" title="Telegram" src="media/logo/Telegram.svg">
-<img width="5%" title="Jira" src="media/logo/Jira.svg">
+<<a href="https://www.jetbrains.com/idea/" target="_blank">
+  <img width="6%" title="IntelliJ IDEA" src="Intelij_IDEA.svg">
+</a>
+<a href="https://github.com" target="_blank">
+  <img width="6%" title="GitHub" src="GitHub.svg">
+</a>
+<a href="https://www.java.com" target="_blank">
+  <img width="6%" title="Java" src="Java.svg">
+</a>
+<a href="https://selenide.org" target="_blank">
+    <img width="6%" title="Selenide" src="Selenide.svg">
+  </a>
+<a href="https://gradle.org" target="_blank">
+    <img width="6%" title="Gradle" src="Gradle.svg">
+  </a>
+<a href="https://junit.org/junit5/" target="_blank">
+    <img width="6%" title="JUnit5" src="JUnit5.svg">
+  </a>  
+<a href="https://aerokube.com/selenoid/latest/" target="_blank">
+<img width="6%" title="Selenoid" src="Selenoid.svg">
+</a>
+<a href="https://jenkins.io" target="_blank">
+    <img width="6%" title="Jenkins" src="Jenkins.svg">
+  </a>
+<a href="https://allurereport.org/" target="_blank">
+    <img width="6%" title="Allure Report" src="Allure_Report.svg">
+  </a>
+<a href="https://telegram.org" target="_blank">
+    <img width="6%" title="Telegram" src="Telegram.svg">
+  </a>
+  <a href="https://qameta.io/allure-testops/" target="_blank">
+    <img width="5%" title="Allure TestOps" src="AllureTestOps.svg">
+  </a>
+<a href="https://www.atlassian.com/ru/software/jira" target="_blank">
+<img width="5%" title="Jira" src="Jira.svg">
+</a>
 </p>
 
 - В данном проекте автотесты написаны на языке <code>Java</code> с использованием фреймворка для тестирования Selenide.
