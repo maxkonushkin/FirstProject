@@ -62,7 +62,7 @@ flowchart LR;
 A(local launch)-->B(Allure_Report);
     C(Jenkins)-->D(GitHub)-->U(Selenoid)-->B(Allure_Report)-->E(Telegram);
     U(Selenoid)-->I(Allure_TestOps
-    Allure_Report);
+    Allure_Report)-->O(Telegram);
     Q(Allure_TestOps)-->W(Jenkins)-->R(GitHub)-->T(Allure_Report)-->Y(Telegram); 
 ```
 
