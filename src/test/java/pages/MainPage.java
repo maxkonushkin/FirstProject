@@ -12,8 +12,8 @@ public class MainPage {
 
     private final SelenideElement checkResult = $(".sme-banner__title"),
             attention = $(".attention__box"),
-            attentionСlose = $(".attention__button"),
-            credit = $(".nav-menu-panel__list-item-button-text");
+            attentionСlose = $(".attention__button");
+
 
     ElementsCollection transfersByPhoneNumber = $$("[href='/sbp/']"),
             loanRepayment = $$("[href='/payment/credit/']"),
@@ -29,12 +29,6 @@ public class MainPage {
         if (attention.is(visible)) {
             attentionСlose.click();
         }
-        return this;
-    }
-
-    @Step("Нажимаем на кнопку Кредит")
-    public MainPage credit() {
-        credit.click();
         return this;
     }
 
