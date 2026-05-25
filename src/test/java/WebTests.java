@@ -1,7 +1,13 @@
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import pages.MainPage;
+
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selenide.$;
 
 @Story("Проверяем работу кнопок на ЭФ Переводы")
 public class WebTests extends TestBase {
@@ -62,6 +68,19 @@ public class WebTests extends TestBase {
         mainPage.openPaymentPage();
         mainPage.transferByRequisite("Перевод по реквизитам");
         mainPage.checkResult("Переводы по реквизитам");
+    }
+
+    @CsvSource(value = {
+            "Кредиты , Потребительские кредиты на любые цели",
+            "Карты , Кредитные и дебетовые карты",
+            "Вклады , Счета и вклады"
+    })
+    @DisplayName("Проверка кликабельности кнопки Кредиты, на ЭФ Платежи и переводы")
+    @ParameterizedTest(name = "Для поискового запроса {0} должен отображать заголовок {1}")
+    void searchResults(String searchQuery, String expectedText) {
+        mainPage.openPaymentPage();
+        $(".site-header-new__body").$(byText(searchQuery)).click();
+        $(".section-menu__list-item-link-text").parent().shouldHave(text(expectedText));
     }
 
 }
