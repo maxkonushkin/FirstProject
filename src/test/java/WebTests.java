@@ -2,6 +2,7 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import pages.MainPage;
 
@@ -73,11 +74,20 @@ public class WebTests extends TestBase {
     @CsvSource(value = {
             "Кредиты , Потребительские кредиты на любые цели",
             "Карты , Кредитные и дебетовые карты",
-            "Вклады , Счета и вклады"
+
     })
-    @DisplayName("Проверка кликабельности кнопки Кредиты, на ЭФ Платежи и переводы")
+    @DisplayName("Проверка кликабельности кнопок 'Кредиты' и 'Карты' верхнего тапбара, на ЭФ Платежи и переводы")
     @ParameterizedTest(name = "Для поискового запроса {0} должен отображать заголовок {1}")
     void searchResults(String searchQuery, String expectedText) {
+        mainPage.openPaymentPage();
+        $(".site-header-new__body").$(byText(searchQuery)).click();
+        $(".section-menu__list-item-link-text").parent().shouldHave(text(expectedText));
+    }
+
+    @CsvFileSource(resources = "/test_data/searchResultsShouldContainExpected.csv")
+    @DisplayName("Проверка кликабельности кнопок 'Вклады' и 'Сервисы' верхнего тапбара, на ЭФ Платежи и переводы")
+    @ParameterizedTest(name = "Для поискового запроса {0} должен отображать текст {1}")
+    void searchResultsShouldContainExpected(String searchQuery, String expectedText) {
         mainPage.openPaymentPage();
         $(".site-header-new__body").$(byText(searchQuery)).click();
         $(".section-menu__list-item-link-text").parent().shouldHave(text(expectedText));
