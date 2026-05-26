@@ -6,9 +6,9 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import pages.MainPage;
 
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.*;
 
 @Story("Проверяем работу кнопок на ЭФ Переводы")
 public class WebTests extends TestBase {
@@ -73,24 +73,24 @@ public class WebTests extends TestBase {
 
     @CsvSource(value = {
             "Кредиты , Потребительские кредиты на любые цели",
-            "Карты , Кредитные и дебетовые карты",
+            "Карты , Кредитные и дебетовые карты"
 
     })
     @DisplayName("Проверка кликабельности кнопок 'Кредиты' и 'Карты' верхнего тапбара, на ЭФ Платежи и переводы")
     @ParameterizedTest(name = "Для поискового запроса {0} должен отображать заголовок {1}")
     void searchResults(String searchQuery, String expectedText) {
-        mainPage.openPaymentPage();
+        mainPage.openPaymentPageWithOutAttention();
         $(".site-header-new__body").$(byText(searchQuery)).click();
-        $(".section-menu__list-item-link-text").parent().shouldHave(text(expectedText));
+        $x("//span[contains(normalize-space(.), '" + expectedText + "')]").shouldBe(visible);
     }
 
     @CsvFileSource(resources = "/test_data/searchResultsShouldContainExpected.csv")
     @DisplayName("Проверка кликабельности кнопок 'Вклады' и 'Сервисы' верхнего тапбара, на ЭФ Платежи и переводы")
     @ParameterizedTest(name = "Для поискового запроса {0} должен отображать текст {1}")
     void searchResultsShouldContainExpected(String searchQuery, String expectedText) {
-        mainPage.openPaymentPage();
+        mainPage.openPaymentPageWithOutAttention();
         $(".site-header-new__body").$(byText(searchQuery)).click();
-        $(".section-menu__list-item-link-text").parent().shouldHave(text(expectedText));
+        $x("//span[contains(normalize-space(.), '" + expectedText + "')]").shouldBe(visible);
     }
 
 }

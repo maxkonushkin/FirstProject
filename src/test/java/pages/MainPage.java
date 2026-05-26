@@ -23,12 +23,19 @@ public class MainPage {
             depositReplenishment = $$("[href='/payment/deposits/']"),
             transferByRequisite = $$("[href='/single/transfers/']");
 
-    @Step("Открываем страницу платежей")
+    @Step("Открываем страницу платежей с закрытием 'attention'")
     public MainPage openPaymentPage() {
         open("/payment");
         if (attention.is(visible)) {
             attentionСlose.click();
         }
+        sleep(1000);
+        return this;
+    }
+
+    @Step("Открываем страницу платежей без закрытия 'attention'")
+    public MainPage openPaymentPageWithOutAttention() {
+        open("/payment");
         return this;
     }
 
