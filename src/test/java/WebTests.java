@@ -74,8 +74,8 @@ public class WebTests extends TestBase {
     @CsvSource(value = {
             "Кредиты , Потребительские кредиты на любые цели",
             "Карты , Кредитные и дебетовые карты"
-
     })
+
     @DisplayName("Проверка кликабельности кнопок 'Кредиты' и 'Карты' верхнего тапбара, на ЭФ Платежи и переводы")
     @ParameterizedTest(name = "Для поискового запроса {0} должен отображать заголовок {1}")
     void searchResults(String searchQuery, String expectedText) {
