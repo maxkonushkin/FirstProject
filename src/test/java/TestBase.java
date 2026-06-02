@@ -22,7 +22,7 @@ public class TestBase {
 
     @Story("Открываем сайт банка")
     @BeforeAll
-    static void beforeAll() {
+    static void setupEnvironment() {
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
         String remoteUrl = System.getProperty("remoteUrl");
