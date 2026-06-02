@@ -23,12 +23,17 @@ public class TestBase {
     @Story("Открываем сайт банка")
     @BeforeAll
     static void setupEnvironment() {
-        Configuration.browserSize = "1920x1080";
+        String browserSize = System.getProperty("browserSize", "1920x1080");
+        Configuration.browserSize = browserSize;
         Configuration.pageLoadStrategy = "eager";
         String remoteUrl = System.getProperty("remoteUrl");
         Configuration.remote = remoteUrl;
         String baseUrl = System.getProperty("baseUrl", "https://rencredit.ru/");
         Configuration.baseUrl = baseUrl;
+        String browser = System.getProperty("browser", "chrome");
+        Configuration.browser = browser;
+        String browserVersion = System.getProperty("browserVersion");
+        Configuration.browserVersion = browserVersion;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
